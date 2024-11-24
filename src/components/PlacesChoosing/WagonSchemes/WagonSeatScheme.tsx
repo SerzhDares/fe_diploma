@@ -2,7 +2,6 @@
 export const WagonSeatScheme = () => {
   return (
     <>
-      <div className="sheme_wagon_number">22</div>
       <div className="wagon_scheme">
         <img src="/src/images/wagon_beginning.jpg" alt="начало вагона" className="wagon_beginning"/>
         <div className="places_scheme">

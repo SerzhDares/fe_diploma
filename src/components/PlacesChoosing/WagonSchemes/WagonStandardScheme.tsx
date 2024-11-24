@@ -1,8 +1,7 @@
 
-export const WagonCoupeScheme = () => {
+export const WagonStandardScheme = () => {
   return (
     <>
-      <div className="sheme_wagon_number">07</div>
       <div className="wagon_scheme">
         <img src="/src/images/wagon_beginning.jpg" alt="начало вагона" className="wagon_beginning"/>
         <div className="places_scheme">
@@ -77,29 +76,37 @@ export const WagonCoupeScheme = () => {
             </div>
           </div>
           <div className="coupes_places side-places">
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn place-unavailable_btn">33</button>
+              <button className="place_btn side-place_btn">34</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">35</button>
+              <button className="place_btn side-place_btn">36</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">37</button>
+              <button className="place_btn side-place_btn">38</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">39</button>
+              <button className="place_btn side-place_btn">40</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">41</button>
+              <button className="place_btn side-place_btn">42</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">43</button>
+              <button className="place_btn side-place_btn">44</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">45</button>
+              <button className="place_btn side-place_btn">46</button>
             </div>
-            <div className="coupe_places coupe_side-places">
-              <div className="no-side-places"></div>
+            <div className="coupe_places">
+              <button className="place_btn side-place_btn">47</button>
+              <button className="place_btn side-place_btn">48</button>
             </div>
           </div>
         </div>

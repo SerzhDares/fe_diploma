@@ -37,7 +37,7 @@
           <form action="" class="header__form header__form_trains">
             <div class="form_inputs_container">
               <div class="form_inputs route-inputs form-inputs_trains">
-                <div class="trains_title_input">
+                <div class="trains-way_title_input">
                   <span class="input_title">Направление</span>
                   <input type="text" class="form__input form__input_geo form__input_trains" placeholder="Откуда">
                 </div>
@@ -45,11 +45,13 @@
                 <input type="text" class="form__input form__input_geo form__input_trains" placeholder="Куда">
               </div>
               <div class="form_inputs date-inputs form-inputs_trains">
-                <div class="trains_title_input">
+                <div class="trains-date_title_input">
                   <span class="input_title input_title_date">Дата</span>
                   <input type="text" class="form__input form__input_date form__input_trains trains_date-input" placeholder="ДД/ММ/ГГ">
                 </div>
-                <input type="text" class="form__input form__input_date form__input_trains trains_date-input" placeholder="ДД/ММ/ГГ">
+                <div class="trains-date_title_input">
+                  <input type="text" class="form__input form__input_date form__input_trains trains_date-input" placeholder="ДД/ММ/ГГ">
+                </div>
               </div>
             </div>
             <button class="orange_btn search_btn trains_search_btn">Найти билеты</button>
@@ -90,10 +92,14 @@
         <aside class="aside_block">
           <section class="options">
             <div class="aside_block_item options_dates">
-              <span class="input_title options_title">Дата поездки</span>
-              <input type="text" class="form__input form__input_date options_input_date" placeholder="ДД/ММ/ГГ">
-              <span class="input_title options_title">Дата возвращения</span>
-              <input type="text" class="form__input form__input_date options_input_date" placeholder="ДД/ММ/ГГ">
+              <div class="options_date">
+                <span class="input_title options_title">Дата поездки</span>
+                <input type="text" class="form__input form__input_date options_input_date" placeholder="ДД/ММ/ГГ">
+              </div>
+              <div class="options_date">
+                <span class="input_title options_title">Дата возвращения</span>
+                <input type="text" class="form__input form__input_date options_input_date" placeholder="ДД/ММ/ГГ">
+              </div>
             </div>
             <div class="aside_block_item wagon_options">
               <div class="wagon_option wagon_coupe">

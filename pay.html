@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Пассажиры</title>
+    <title>Оплата</title>
   </head>
   <body>
     <header class="header trains_header" id="header">
@@ -65,13 +65,13 @@
               <span class="stage_number">1</span>
               <span class="stage_name">Билеты</span>
             </li>
-            <li class="stage passengers_stage">
+            <li class="stage passengers_stage stage_prev">
               <div class="stage_border-top"></div>
               <div class="stage_border-bottom"></div>
               <span class="stage_number">2</span>
               <span class="stage_name">Пассажиры</span>
             </li>
-            <li class="stage">
+            <li class="stage pay_stage">
               <div class="stage_border-top"></div>
               <div class="stage_border-bottom"></div>
               <span class="stage_number">3</span>
@@ -217,201 +217,60 @@
               </span>
           </div>
         </aside>
-        <main class="passengers_data">
+        <main class="passengers_data pay_data">
           <div class="passenger_data">
-            <div class="passenger_data_title">
-              <div class="pd_title_block">
-                <button class="passenger_data_btn">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="16" cy="16" r="15" stroke="#928F94" stroke-width="2"/>
-                    <line x1="8" y1="16" x2="24" y2="16" stroke="#928F94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-                <span class="passenger_data_title_text">Пассажир 1</span>
-              </div>
-              <button class="delete_passenger_btn">
-                <img src="/src/images/delete_passenger_icon.svg" alt="удалить" class="delete_passenger_icon">
-              </button>
+            <div class="passenger_data_title pay_pd_title">
+              <span class="passenger_data_title_text">Персональные данные</span>
             </div>
             <div class="passenger_data_main">
-              <div class="about_passenger">
-                <select name="ages" id="age_type_select" class="age_type_select">
-                  <option class="age_option" value="Взрослый">Взрослый</option>
-                  <option class="age_option" value="Детский">Детский</option>
-                </select>
+              <div class="about_passenger pay_personal_data">
                 <div class="full_name_container">
                   <div class="pd_item">
-                    <span class="pd_item_title">Фамилия</span>
+                    <span class="pd_item_title pay_item_title">Фамилия</span>
                     <input type="text" class="pd_item-input fn_item-input">
                   </div>
                   <div class="pd_item">
-                    <span class="pd_item_title">Имя</span>
+                    <span class="pd_item_title pay_item_title">Имя</span>
                     <input type="text" class="pd_item-input fn_item-input">
                   </div>
                   <div class="pd_item">
-                    <span class="pd_item_title">Отчество</span>
+                    <span class="pd_item_title pay_item_title">Отчество</span>
                     <input type="text" class="pd_item-input fn_item-input">
                   </div>
                 </div>
-                <div class="sex_birthday_container">
-                  <div class="sb_item">
-                    <span class="pd_item_title">Пол</span>
-                    <div class="check_sex_container">
-                      <span class="check_sex check_sex_m checked_sex">М</span>
-                      <span class="check_sex">Ж</span>
-                    </div>
-                  </div>
-                  <div class="sb_item">
-                    <span class="pd_item_title">Дата рождения</span>
-                    <input type="text" class="pd_item-input" placeholder="ДД.ММ.ГГ">
-                  </div>
+                <div class="pd_item">
+                  <span class="pd_item_title pay_item_title">Контактный телефон</span>
+                  <input type="text" class="pd_item-input contact_input" placeholder="+7_ _ _ _ _ _ _ _ _ _">
                 </div>
-                <div class="limited_mobility_container">
-                  <input type="checkbox" class="lm_checkbox">
-                  <span class="lm_text">ограниченная подвижность</span>
+                <div class="pd_item">
+                  <span class="pd_item_title pay_item_title">E-mail</span>
+                  <input type="text" class="pd_item-input contact_input" placeholder="inbox@gmail.ru">
                 </div>
               </div>
-              <div class="document_container">
-                <div class="document_item">
-                  <span class="pd_item_title">Тип документа</span>
-                  <select name="documents" id="docs_type_select" class="doc_type_select passport_option">
-                    <option class="doc_option" value="Паспорт РФ">Паспорт РФ</option>
-                    <option class="doc_option" value="Свидетельство о рождении">Свидетельство о рождении</option>
-                  </select>
+              <div class="passenger_data_title pay_pd_title pay_methods_title">
+                <span class="passenger_data_title_text">Способ оплаты</span>
+              </div>
+              <div class="pay_method_container">
+                <div class="pay_method_variant">
+                  <input type="checkbox" class="pay_method_check">
+                  <span class="pay_method_text">Онлайн</span>
                 </div>
-                <div class="document_item">
-                  <span class="pd_item_title">Серия</span>
-                  <input type="text" class="pd_item-input doc_input" placeholder="__ __ __ __">
-                </div>
-                <div class="document_item">
-                  <span class="pd_item_title">Номер</span>
-                  <input type="text" class="pd_item-input doc_input" placeholder="__ __ __ __ __ __">
+                <div class="online_pay_variants">
+                  <span class="online_pay_variant">Банковской<br/>картой</span>
+                  <span class="online_pay_variant">PayPal</span>
+                  <span class="online_pay_variant">Visa QIWI Wallet</span>
                 </div>
               </div>
-              <div class="next-passenger_container">
-                <button class="transparent_black_btn next-pass_btn">Следующий пассажир</button>
-              </div>
-            </div>
-          </div>
-          <div class="passenger_data">
-            <div class="passenger_data_title">
-              <div class="pd_title_block">
-                <button class="passenger_data_btn">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="16" cy="16" r="15" stroke="#928F94" stroke-width="2"/>
-                    <line x1="8" y1="16" x2="24" y2="16" stroke="#928F94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-                <span class="passenger_data_title_text">Пассажир 2</span>
-              </div>
-              <button class="delete_passenger_btn">
-                <img src="/src/images/delete_passenger_icon.svg" alt="удалить" class="delete_passenger_icon">
-              </button>
-            </div>
-            <div class="passenger_data_main">
-              <div class="about_passenger">
-                <select name="ages" id="age_type_select" class="age_type_select">
-                  <option class="age_option" value="Взрослый">Взрослый</option>
-                  <option class="age_option" value="Детский">Детский</option>
-                </select>
-                <div class="full_name_container">
-                  <div class="pd_item">
-                    <span class="pd_item_title">Фамилия</span>
-                    <input type="text" class="pd_item-input fn_item-input">
-                  </div>
-                  <div class="pd_item">
-                    <span class="pd_item_title">Имя</span>
-                    <input type="text" class="pd_item-input fn_item-input">
-                  </div>
-                  <div class="pd_item">
-                    <span class="pd_item_title">Отчество</span>
-                    <input type="text" class="pd_item-input fn_item-input">
-                  </div>
-                </div>
-                <div class="sex_birthday_container">
-                  <div class="sb_item">
-                    <span class="pd_item_title">Пол</span>
-                    <div class="check_sex_container">
-                      <span class="check_sex check_sex_m checked_sex">М</span>
-                      <span class="check_sex">Ж</span>
-                    </div>
-                  </div>
-                  <div class="sb_item">
-                    <span class="pd_item_title">Дата рождения</span>
-                    <input type="text" class="pd_item-input" placeholder="ДД.ММ.ГГ">
-                  </div>
-                </div>
-                <div class="limited_mobility_container">
-                  <input type="checkbox" class="lm_checkbox">
-                  <span class="lm_text">ограниченная подвижность</span>
+              <div class="pay_method_container">
+                <div class="pay_method_variant">
+                  <input type="checkbox" class="pay_method_check">
+                  <span class="pay_method_text">Наличными</span>
                 </div>
               </div>
-              <div class="document_container">
-                <div class="document_item">
-                  <span class="pd_item_title">Тип документа</span>
-                  <select name="documents" id="docs_type_select" class="doc_type_select birth_sertificate_option">
-                    <option class="doc_option" value="Паспорт РФ">Паспорт РФ</option>
-                    <option class="doc_option" value="Свидетельство о рождении">Свидетельство о рождении</option>
-                  </select>
-                </div>
-                <div class="document_item">
-                  <span class="pd_item_title">Номер</span>
-                  <!-- doc-error_input -->
-                  <input type="text" class="pd_item-input doc_input" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
-                </div>
-              </div>
-              <div class="next-passenger_container">
-                <button class="transparent_black_btn next-pass_btn">Следующий пассажир</button>
-              </div>
-              <!-- <div class="next-passenger_container success-passenger_data">
-                <div class="data-ready_container">
-                  <div class="data-ready-icon_container">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8369 32 32 24.8365 32 16C32 7.16345 24.8369 0 16 0C7.16309 0 0 7.16345 0 16C0 24.8365 7.16309 32 16 32ZM10.2168 15.8293L10.207 15.8401C9.93262 16.1293 9.93262 16.6112 10.1973 16.9111C10.8311 17.5991 11.4551 18.2819 12.0703 18.9553C12.6914 19.6343 13.3037 20.3038 13.9092 20.9598C13.958 21.0134 14.0361 21.0134 14.085 20.9598L22.8018 11.4272C23.0664 11.1381 23.0664 10.6667 22.8018 10.3776L22.665 10.2169C22.4004 9.92773 21.959 9.92773 21.6953 10.2169L13.9189 18.7213C13.8799 18.7642 13.8311 18.7642 13.791 18.7213C12.9297 17.7681 12.0479 16.7933 11.1768 15.8401C10.9121 15.5509 10.4814 15.5509 10.2168 15.8293Z" fill="#F9FEF7"/>
-                    </svg>                    
-                  </div>
-                  <span class="data-ready_text">Готово</span> 
-                </div>
-                <button class="transparent_black_btn next-pass_btn">Следующий пассажир</button>
-              </div> -->
-              <!-- <div class="error-passenger_container">
-                <button class="close-error_btn">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8369 32 32 24.8365 32 16C32 7.16345 24.8369 0 16 0C7.16309 0 0 7.16345 0 16C0 24.8365 7.16309 32 16 32ZM16 14.6L20.2998 10.3C20.5996 9.90002 21.2002 9.90002 21.5996 10.3L21.7002 10.4C22.0996 10.7 22.0996 11.3 21.7002 11.7L17.4004 16L21.5996 20.2C22 20.6 22 21.2 21.5996 21.6C21.3662 21.8337 21.0645 21.9309 20.7744 21.8915C20.5674 21.8634 20.3662 21.7662 20.2002 21.6L16 17.4L11.7002 21.7C11.4004 22.1 10.7998 22.1 10.4004 21.7L10.2998 21.6C9.90039 21.3 9.90039 20.7 10.2998 20.3L14.5996 16L10.2998 11.7C10.0811 11.4811 9.98242 11.2021 10.0029 10.929C10.0205 10.7031 10.1191 10.4811 10.2998 10.3C10.7002 9.90002 11.2998 9.90002 11.7002 10.3L16 14.6Z" fill="white" fill-opacity="0.81"/>
-                  </svg>                    
-                </button>
-                <div class="error-passenger_text">
-                    Номер свидетельства о рождении указан некорректно<br/>
-                    Пример: <span class="doc-number_example">VIII-ЫП-123456</span>
-                </div>
-              </div> -->
-            </div>
-          </div>
-          <div class="passenger_data">
-            <div class="passenger_data_title">
-              <div class="pd_title_block">
-                <button class="passenger_data_btn">
-                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.9449 8.46381L14.9449 14.9449L8.46378 14.9449C7.86089 14.9449 7.40871 15.3971 7.40871 16C7.40871 16.6029 7.86089 17.0551 8.46378 17.0551L14.9449 17.0551L14.9449 23.5362C14.9449 24.1391 15.3971 24.5913 15.9246 24.5159L16.0753 24.5159C16.6782 24.5159 17.1304 24.0637 17.055 23.5362L17.055 17.0551L23.3854 17.0551C23.9883 17.0551 24.4405 16.6029 24.4405 16C24.4405 15.3971 23.9883 14.9449 23.3854 14.9449L17.055 14.9449L17.055 8.46381C17.055 7.86091 16.6029 7.40874 16.0753 7.4841L15.9246 7.4841C15.3217 7.4841 14.8695 7.93628 14.9449 8.46381Z" fill="#FFA800"/>
-                    <circle cx="16" cy="16" r="15" stroke="#FFA800" stroke-width="2"/>
-                  </svg>                    
-                </button>
-                <span class="passenger_data_title_text">Пассажир 3</span>
-              </div>
-            </div>
-          </div>
-          <div class="passenger_data">
-            <div class="passenger_data_title">
-              <div class="pd_title_block">
-                <span class="passenger_data_title_text">Добавить пассажира</span>
-              </div>
-              <button class="add_passenger_btn">
-                <img src="/src/images/add_passenger_icon.svg" alt="добавить" class="add_passenger_icon">
-              </button>
             </div>
           </div>
           <div class="btn_container">
-            <button class="orange_btn next_btn disabled_btn">Далее</button>
+            <button class="orange_btn buy_btn">купить билеты</button>
           </div>
         </main>
       </div>
