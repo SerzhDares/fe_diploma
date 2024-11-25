@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "engines": {
-    "node": ">=16.0.0 <21.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@cevad-tokatli/date-picker": "^1.0.3",
