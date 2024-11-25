@@ -1,3 +1,7 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/vlqrhtv8nxdhid4m?svg=true)](https://ci.appveyor.com/project/SerzhDares/fe-diploma)
+
+https://serzhdares.github.io/fe_diploma/
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
