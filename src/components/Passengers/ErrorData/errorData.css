@@ -1,0 +1,25 @@
+.error-passenger_container {
+    display: flex;
+    align-items: center;
+    background-color: #FF3D0061;
+    padding: 35px 25px;
+}
+  
+.close-error_btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    margin-right: 15px;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.error-passenger_text {
+    font-size: 18px;
+}
+
+.doc-number_example {
+    font-weight: 700;
+}

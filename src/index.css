@@ -13,6 +13,14 @@ body {
   margin: 0;
 }
 
+.open {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
 .header {
   min-height: 100vh;
   background-image: url('images/header_background.png');
@@ -1284,339 +1292,13 @@ input[type=text]::-webkit-input-placeholder {
 
 /* passengers */
 
-.details_aside_block {
-  background-color: #3E3C41;
-  color:#fff;
-}
-
-.details_title {
-  font-size: 30px;
-  font-weight: 500;
-  text-align: center;
-  padding: 35px;
-  text-transform: uppercase;
-  color: #E5E5E5;
-}
-
-.travel_date {
-  font-size: 16px;
-  padding-top: 5px;
-  padding-right: 30px;
-}
-
-.travel_info {
-  margin-top: 50px;
-  padding-bottom: 25px;
-}
-
-.ti_text_block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.ti_text_option {
-  font-size: 18px;
-  color: #E5E5E5;
-}
-
-.ti_text_number {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.ti_text_route {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.ti_text_route,
-.arrival_time_text,
-.details_end_point {
-  text-align: end;
-}
-
-.tda_details {
-  margin-top: 67px;
-  margin-bottom: 20px;
-}
-
-.ti_travel_date {
-  padding-right: 0;
-  color: #928F94;
-}
-
-.tt_details {
-  margin-bottom: 30px;
-}
-
-.tt_value_details {
-  display: block;
-  margin-top: -22px;
-}
-
-.details_points {
-  display: flex;
-  justify-content: space-between;
-}
-
-.details_station {
-  width: min-content;
-}
-
-.details_settlement,
-.details_station {
-  display: block;
-}
-
-.travel_date_back {
-  padding-right: 0;
-}
-
-.passengers_info {
-  background-image: url("/src/images/orange_human_icon.svg");
-  padding-bottom: 25px;
-}
-
-.passengers_travel_info {
-  margin-top: 35px;
-  padding-bottom: 0;
-}
-
-.details_price_value {
-  color: #FFF;
-}
-
-.total_text_block {
-  align-items: flex-end;
-  margin-bottom: 0;
-}
-
-.ti_text_total {
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 700;
-  padding-bottom: 5px;
-}
-
-.total_price {
-  color: #FFA800;
-  font-weight: 700;
-}
-
-.total_currency {
-  color: #E5E5E5;
-}
-
-.total_price,
-.total_currency {
-  font-size: 46px;
-}
-
-.passenger_data {
-  border: 1px solid #C4C4C4;
-  box-shadow: 0px 2px 2px 0px #00000040;
-  width: 920px;
-  margin-bottom: 45px;
-}
-
-.passenger_data_title {
-  background-color: #F9F9F9;
-  padding: 35px 40px 35px 25px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.pd_title_block {
-  display: flex;
-}
-
-.passenger_data_title_text {
-  font-size: 30px;
-  color: #292929;
-}
-
-.passenger_data_btn {
-  margin-right: 15px;
-}
-
-.passenger_data_btn,
-.delete_passenger_btn,
-.add_passenger_btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.passenger_data_main {
-  background-color: #FFF;
-  border-top: 1px dashed #928F94
-}
-
-.about_passenger {
-  padding: 40px 35px 0;
-}
-
-.age_type_select {
-  margin-bottom: 45px;
-}
-
-.age_type_select,
-.pd_item-input,
-.doc_type_select {
-  width: 270px;
-  height: 50px;
-  font-size: 24px;
-  padding: 8px 15px;
-  border-radius: 5px;
-  border: 1px solid #928F94;
-}
-
-.age_type_select,
-.doc_type_select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url('/src/images/select_arrow.svg') no-repeat;
-  background-position: right 10px center;
-}
-
-.fn_item-input {
-  text-transform: capitalize;
-}
-
-.full_name_container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-
-.pd_item_title {
-  display: block;
-  font-size: 16px;
-  color: #928F94;
-  margin-bottom: 10px;
-}
-
-.sex_birthday_container {
-  display: flex;
-  margin-bottom: 45px;
-}
-
-.sb_item {
-  margin-right: 30px;
-}
-
-.check_sex_container {
-  width: 200px;
-  height: 50px;
-  display: flex;
-  border: 1px solid #928F94;
-  border-radius: 5px;
-}
-
-.check_sex {
-  width: 50%;
-  text-align: center;
-  align-self: center;
-  font-size: 30px;
-  font-weight: 900;
-  height: 100%;
-  padding-top: 7px;
-  cursor: pointer;
-}
-
-.check_sex_m {
-  border-right: 1px solid #928F94;;
-}
-
-.checked_sex {
-  background-color: #FFA800;
-}
-
-.limited_mobility_container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.lm_checkbox {
-  width: 28px;
-  height: 28px;
-  margin-right: 20px;
-  accent-color: #FFA800;
-}
-
-.lm_text {
-  font-size: 18px;
-  color: #292929;
-}
-
-.document_container {
-  display: flex;
-  padding: 40px 35px 35px;
-  border-top: 1px dashed #928F94;
-  border-bottom: 1px dashed #928F94;
-}
-
-.document_item {
-  margin-right: 35px;
-}
-
-.doc_type_select {
-  font-size: 18px;
-}
-
-.passport_option,
-.doc_input {
-  width: 200px;
-}
-
 .doc-error_input {
   color: #FF3D00C2;
   border-color: #FF3D00C2;
 }
 
-.birth_sertificate_option {
-  width: 440px;
-}
-
-.next-passenger_container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 35px 35px 30px;
-}
-
-.next-pass_btn {
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-.error-passenger_container {
-  display: flex;
-  align-items: center;
-  background-color: #FF3D0061;
-  padding: 35px 25px;
-}
-
-.close-error_btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  margin-right: 15px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.error-passenger_text,
 .data-ready_text {
   font-size: 18px;
-}
-
-.doc-number_example {
-  font-weight: 700;
 }
 
 .success-passenger_data {
@@ -1637,13 +1319,7 @@ input[type=text]::-webkit-input-placeholder {
   color: #FFF;
 }
 
-.passenger_data_btn:hover svg circle {
-  stroke: transparent;
-}
-
 /* pay */
-
-
 
 .pay_pd_title {
   padding-left: 35px;

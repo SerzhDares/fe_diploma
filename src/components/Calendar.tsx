@@ -7,7 +7,7 @@ import { ru } from 'date-fns/locale/ru';
 registerLocale('ru', ru);
 
 export const Calendar = () => {
-  const [startDate, setStartDate] = useState("");
+  const [startDate, setStartDate] = useState<Date | null>(null);
   return (
     <DatePicker 
       locale="ru" 
